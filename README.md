@@ -1,11 +1,11 @@
 ```markdown
 # Personal Budget & Expense Tracker
 
-## Week 2 Assignment
+## Week 3 Assignment
 
 This project is a Personal Budget & Expense Tracker built using HTML and CSS.
 
-The project is being developed step by step throughout the course. In Week 2, the Week 1 project was upgraded with an expense table, an improved expense form, multimedia content, interactive HTML elements, and advanced CSS selectors.
+The project continues from Week 1 and Week 2. In Week 3, the main focus was improving the visual identity and user interface of the existing Budget Tracker using CSS.
 
 ## Files
 
@@ -20,92 +20,98 @@ It includes:
 - Add Expense form
 - Expense category dropdown
 - Expense table
-- Five sample expenses
-- How to use section using `<details>` and `<summary>`
-- YouTube budgeting video using `<iframe>`
+- Sample expense records
+- How to use section
+- Budgeting tips video
 - Footer
 
 ### style.css
 
-The `style.css` file controls the appearance of the website.
+The `style.css` file controls the visual appearance of the application.
 
 It includes:
 
-- Page and section styling
-- Form styling
-- Table borders and spacing
-- Colored table headers
-- Alternating table rows
-- Table hover effects
-- Button hover effects
-- Input focus effects
-- Advanced CSS selectors
+- Custom Google Fonts
+- Consistent color palette
+- Styled page sections
+- Styled expense table
+- Styled Add Expense form
+- Styled buttons
+- CSS Box Model
+- Borders
+- Padding
+- Margins
+- Border radius
+- Hover effects
+- Focus effects
+- Responsive styling
 
-## Week 2 Features
+## Week 3 Visual Design
+
+### Color Palette
+
+A consistent professional color palette was selected:
+
+- Dark Navy: #1F2937
+- Blue: #2563EB
+- Light Blue: #DBEAFE
+- Light Background: #F3F6FA
+- White: #FFFFFF
+- Text Gray: #374151
+- Border Gray: #D1D5DB
+
+The colors are used consistently across the page headings, buttons, table, backgrounds, borders, and other interface elements.
+
+### Typography
+
+Google Fonts are used for the project.
+
+- Montserrat is used for headings.
+- Open Sans is used for body text, labels, form elements, buttons, and table content.
+
+This creates a clear visual hierarchy and improves readability.
 
 ### Expense Table
 
-The expense table uses:
+The expense table includes:
 
-- `<table>`
-- `<thead>`
-- `<tbody>`
-- `<tr>`
-- `<th>`
-- `<td>`
-
-It contains five sample expense records.
+- Proper spacing
+- Borders
+- Styled header
+- Alternating row colors
+- Hover effects
+- Rounded appearance
 
 ### Add Expense Form
 
-The form contains:
+The form includes:
 
-- Expense name
-- Expense amount
-- Expense category
-- Expense date
-- Add Expense button
+- Styled labels
+- Styled input fields
+- Styled category dropdown
+- Consistent spacing
+- Rounded corners
+- Focus effects
+- Styled Add Expense button
 
-The category uses a dropdown with five categories:
+### CSS Box Model
 
-1. Food
-2. Transport
-3. Rent
-4. Entertainment
-5. Other
+The CSS Box Model is used throughout the application.
 
-### Multimedia
+The project uses:
 
-The page includes:
+- Margin to separate sections
+- Padding to create internal spacing
+- Borders to define sections
+- Border radius for rounded corners
 
-- An image using `<img>`
-- A budgeting video using `<iframe>`
-
-### Interactive Elements
-
-The project includes:
-
-- `<details>`
-- `<summary>`
-- Table row hover effects
-- Button hover effects
-- Input focus effects
-
-### Advanced CSS Selectors
-
-The project demonstrates several advanced CSS selectors, including:
-
-- Descendant selector
-- Direct child selector
-- `:nth-child()` pseudo-class
-- `:not()` pseudo-class
-- `:focus` pseudo-class
-- `:hover` pseudo-class
+The page heading, Add Expense form, Expense Table, instructions, and video sections are displayed as separate cards.
 
 ## Technologies Used
 
 - HTML5
 - CSS3
+- Google Fonts
 
 ## Author
 

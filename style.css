@@ -1,185 +1,418 @@
 ```css
-/* General page styling */
+/* =========================================
+   PERSONAL BUDGET & EXPENSE TRACKER
+   WEEK 3 VISUAL DESIGN
+   ========================================= */
+
+
+/* =========================================
+   COLOR PALETTE
+   =========================================
+
+   Dark Navy:   #1F2937
+   Blue:        #2563EB
+   Light Blue:  #DBEAFE
+   Background:  #F3F6FA
+   White:       #FFFFFF
+   Text:        #374151
+   Border:      #D1D5DB
+*/
+
+
+/* =========================================
+   GENERAL PAGE STYLING
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f6f8;
-    color: #333;
+
+    background-color: #F3F6FA;
+
+    color: #374151;
+
+    font-family: "Open Sans", sans-serif;
+
+    line-height: 1.6;
 }
 
-/* Header */
-header {
+
+/* =========================================
+   PAGE HEADING CARD
+   ========================================= */
+
+.page-header {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 30px auto;
+
+    padding: 35px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #D1D5DB;
+
+    border-radius: 14px;
+
     text-align: center;
-    background-color: #2c3e50;
-    color: white;
-    padding: 30px;
+
+    box-shadow: 0 4px 12px rgba(31, 41, 55, 0.08);
 }
 
-header img {
+.page-header img {
     margin-bottom: 10px;
 }
 
-header h1 {
+.page-header h1 {
     margin: 10px 0;
+
+    color: #1F2937;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 700;
+}
+
+.page-header p {
+    margin: 0;
+
+    color: #6B7280;
+
+    font-size: 16px;
 }
 
 
-/* Main content */
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
 main {
     width: 90%;
+
     max-width: 1000px;
-    margin: 30px auto;
+
+    margin: 0 auto;
 }
 
 
-/* Sections */
+/* =========================================
+   SECTION CARDS
+   ========================================= */
+
 .add-expense-section,
 .expenses-section,
 .instructions-section,
 .video-section {
-    background-color: white;
-    padding: 25px;
+    background-color: #FFFFFF;
+
     margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    padding: 30px;
+
+    border: 1px solid #D1D5DB;
+
+    border-radius: 14px;
+
+    box-shadow: 0 4px 12px rgba(31, 41, 55, 0.08);
 }
+
+
+/* =========================================
+   HEADINGS
+   ========================================= */
 
 h2 {
-    color: #2c3e50;
+    margin-top: 0;
+
+    margin-bottom: 20px;
+
+    color: #1F2937;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    border-left: 5px solid #2563EB;
+
+    padding-left: 12px;
 }
 
 
-/* Add Expense Form */
+/* =========================================
+   ADD EXPENSE FORM
+   ========================================= */
+
 form {
     display: flex;
+
     flex-direction: column;
+
     gap: 10px;
 }
 
-/* Advanced selector 1:
-   Direct child selector */
-.add-expense-section > h2 {
-    margin-bottom: 15px;
+label {
+    margin-top: 8px;
+
+    color: #1F2937;
+
+    font-weight: 600;
 }
+
+
+/* Form inputs */
 
 input,
 select {
-    padding: 10px;
-    border: 1px solid #bbb;
-    border-radius: 5px;
-    font-size: 16px;
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background-color: #FFFFFF;
+
+    color: #374151;
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 15px;
+
+    border: 1px solid #D1D5DB;
+
+    border-radius: 8px;
+
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 
-/* Advanced selector 2:
-   Negation pseudo-class */
-input:not([type="submit"]) {
-    background-color: #fafafa;
-}
+/* Input focus */
 
-
-/* Advanced selector 3:
-   Focus pseudo-class */
 input:focus,
 select:focus {
     outline: none;
-    border: 2px solid #3498db;
-    background-color: white;
+
+    border-color: #2563EB;
+
+    box-shadow: 0 0 0 3px #DBEAFE;
 }
 
 
-/* Button */
+/* =========================================
+   BUTTON
+   ========================================= */
+
 button {
-    margin-top: 10px;
-    padding: 12px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    margin-top: 15px;
+
+    padding: 13px 20px;
+
+    background-color: #2563EB;
+
+    color: #FFFFFF;
+
+    font-family: "Open Sans", sans-serif;
+
     font-size: 16px;
+
+    font-weight: 600;
+
+    border: none;
+
+    border-radius: 8px;
+
     cursor: pointer;
+
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #1D4ED8;
+
+    transform: translateY(-1px);
 }
 
 
-/* Expense Table */
+/* =========================================
+   EXPENSE TABLE
+   ========================================= */
+
 table {
     width: 100%;
+
     border-collapse: collapse;
-    margin-top: 15px;
+
+    margin-top: 10px;
+
+    overflow: hidden;
+
+    border: 1px solid #D1D5DB;
+
+    border-radius: 8px;
 }
 
 
-/* Advanced selector 4:
-   Descendant selector */
-.expenses-section td {
-    padding: 12px;
-    border: 1px solid #ddd;
-}
+/* Table header */
 
+thead th {
+    padding: 14px;
 
-/* Table headers */
-th {
-    padding: 12px;
-    background-color: #2c3e50;
-    color: white;
-    border: 1px solid #ddd;
+    background-color: #1F2937;
+
+    color: #FFFFFF;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    border: 1px solid #1F2937;
 }
 
 
 /* Table cells */
-td {
-    text-align: left;
+
+tbody td {
+    padding: 14px;
+
+    border: 1px solid #D1D5DB;
+
+    font-size: 15px;
 }
 
 
-/* Advanced selector 5:
-   Position pseudo-class */
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+/* Alternating rows */
+
+tbody tr:nth-child(even) {
+    background-color: #F3F6FA;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
 }
 
 
-/* Hover effect */
+/* Table hover */
+
 tbody tr:hover {
-    background-color: #dfefff;
-    cursor: pointer;
+    background-color: #DBEAFE;
+
+    transition: background-color 0.2s;
 }
 
 
-/* Instructions */
+/* =========================================
+   DETAILS / INSTRUCTIONS
+   ========================================= */
+
 details {
-    padding: 10px;
+    padding: 5px;
 }
 
 summary {
-    font-weight: bold;
+    color: #2563EB;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-weight: 600;
+
     cursor: pointer;
-    color: #3498db;
+}
+
+details p {
+    margin-top: 15px;
+
+    color: #6B7280;
 }
 
 
-/* Video */
+/* =========================================
+   VIDEO
+   ========================================= */
+
 .video-section {
     text-align: center;
 }
 
+.video-section p {
+    color: #6B7280;
+
+    margin-bottom: 20px;
+}
+
 iframe {
     max-width: 100%;
-    border: none;
+
+    border-radius: 10px;
+
+    border: 1px solid #D1D5DB;
 }
 
 
-/* Footer */
+/* =========================================
+   FOOTER
+   ========================================= */
+
 footer {
-    text-align: center;
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
     margin-top: 30px;
+
+    padding: 25px;
+
+    background-color: #1F2937;
+
+    color: #FFFFFF;
+
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .page-header {
+        width: 94%;
+
+        padding: 25px 15px;
+    }
+
+    .page-header h1 {
+        font-size: 24px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .add-expense-section,
+    .expenses-section,
+    .instructions-section,
+    .video-section {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    thead th,
+    tbody td {
+        padding: 9px;
+    }
 }
 ```
