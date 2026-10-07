@@ -1,56 +1,171 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Budget Tracker</title>
-
-    <!-- Link to CSS -->
+    <title>Personal Budget & Expense Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Main heading -->
-    <h1>My Budget Tracker</h1>
-
-    <!-- Description -->
-    <p class="intro">
-        Track your income and expenses in one place.
-    </p>
-
-    <!-- Add Expense Section -->
-    <section id="add-expense">
-        <h2>Add Expense</h2>
-
-        <label for="expense-name">Expense Name:</label>
-        <input
-            type="text"
-            id="expense-name"
-            placeholder="Mango"
+    <header>
+        <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135679.png"
+            alt="Budget tracker icon"
+            width="80"
         >
 
-        <label for="amount">Amount:</label>
-        <input
-            type="number"
-            id="amount"
-            placeholder="1200"
-        >
+        <h1>Personal Budget & Expense Tracker</h1>
 
-        <label for="category">Category:</label>
-        <input
-            type="text"
-            id="category"
-            placeholder="Fruits"
-        >
-    </section>
+        <p>Track your expenses and manage your budget easily.</p>
+    </header>
 
-    <!-- Your Expenses Section -->
-    <section class="expenses-section">
-        <h2>Your Expenses</h2>
+    <main>
 
-        <p>My expenses yet</p>
-    </section>
+        <!-- Add Expense Section -->
+        <section class="add-expense-section">
+            <h2>Add Expense</h2>
+
+            <form>
+                <label for="expense-name">Expense Name:</label>
+                <input
+                    type="text"
+                    id="expense-name"
+                    name="expense-name"
+                    placeholder="e.g. Groceries"
+                >
+
+                <label for="expense-amount">Amount:</label>
+                <input
+                    type="number"
+                    id="expense-amount"
+                    name="expense-amount"
+                    placeholder="e.g. 500"
+                >
+
+                <label for="expense-category">Category:</label>
+                <select id="expense-category" name="expense-category">
+                    <option value="">Select a category</option>
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="expense-date">Date:</label>
+                <input
+                    type="date"
+                    id="expense-date"
+                    name="expense-date"
+                >
+
+                <button type="button">Add Expense</button>
+            </form>
+        </section>
+
+
+        <!-- Expenses Section -->
+        <section class="expenses-section">
+            <h2>My Expenses</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Groceries</td>
+                        <td>KSh 2,500</td>
+                        <td>Food</td>
+                        <td>2026-10-01</td>
+                    </tr>
+
+                    <tr>
+                        <td>Bus Fare</td>
+                        <td>KSh 500</td>
+                        <td>Transport</td>
+                        <td>2026-10-02</td>
+                    </tr>
+
+                    <tr>
+                        <td>House Rent</td>
+                        <td>KSh 15,000</td>
+                        <td>Rent</td>
+                        <td>2026-10-03</td>
+                    </tr>
+
+                    <tr>
+                        <td>Movie</td>
+                        <td>KSh 1,200</td>
+                        <td>Entertainment</td>
+                        <td>2026-10-04</td>
+                    </tr>
+
+                    <tr>
+                        <td>Mobile Data</td>
+                        <td>KSh 1,000</td>
+                        <td>Other</td>
+                        <td>2026-10-05</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- How to Use Section -->
+        <section class="instructions-section">
+            <details>
+                <summary>How to use this tracker</summary>
+
+                <p>
+                    Enter the name of your expense, the amount, category,
+                    and date using the form above.
+                </p>
+
+                <p>
+                    Click the "Add Expense" button when you are ready.
+                    The button will become functional when JavaScript
+                    is introduced in a later week.
+                </p>
+            </details>
+        </section>
+
+
+        <!-- Budget Tips Video -->
+        <section class="video-section">
+            <h2>Budgeting Tips</h2>
+
+            <p>
+                Watch this video for useful tips on managing your money
+                and creating a better budget.
+            </p>
+
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/1jJmF9yQW1E"
+                title="Budgeting Tips Video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Personal Budget & Expense Tracker</p>
+    </footer>
 
 </body>
 </html>
+```
