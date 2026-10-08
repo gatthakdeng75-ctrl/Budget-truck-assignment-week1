@@ -1,76 +1,173 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SpendWise Budget Tracker</title>
+    <title>SpendWise - Budget Tracker</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Header -->
     <header>
         <h1>SpendWise</h1>
         <p>Personal Budget & Expense Tracker</p>
     </header>
 
+
+    <!-- Main Dashboard -->
     <main class="dashboard">
 
-        <section class="card">
+        <!-- Budget Section -->
+        <section class="card budget-card">
+
             <h2>Budget Overview</h2>
 
             <div class="budget-info">
-                <div>
+
+                <div class="summary-box">
                     <h3>Total Budget</h3>
                     <p id="budgetDisplay">$0.00</p>
                 </div>
 
-                <div>
+                <div class="summary-box">
                     <h3>Total Expenses</h3>
                     <p id="expenseDisplay">$0.00</p>
                 </div>
 
-                <div>
+                <div class="summary-box">
                     <h3>Remaining Balance</h3>
                     <p id="balanceDisplay">$0.00</p>
                 </div>
+
             </div>
-        </section>
 
-        <section class="card">
-            <h2>Expense Summary</h2>
-
-            <p>
-                Use the browser prompts to enter your budget
-                and expenses.
+            <p id="budgetMessage" class="message">
+                Enter your budget to get started.
             </p>
 
-            <button id="startButton">Start Budget Calculator
-            </button>
         </section>
 
+
+        <!-- Budget Form -->
         <section class="card">
+
+            <h2>Set Your Budget</h2>
+
+            <form id="budgetForm">
+
+                <label for="budgetInput">
+                    Monthly Budget
+                </label>
+
+                <input
+                    type="number"
+                    id="budgetInput"
+                    placeholder="Enter your budget"
+                    min="0"
+                    step="0.01"
+                    required
+                >
+
+                <button type="submit">
+                    Set Budget
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Expense Form -->
+        <section class="card">
+
+            <h2>Add an Expense</h2>
+
+            <form id="expenseForm">
+
+                <label for="expenseName">
+                    Expense Name
+                </label>
+
+                <input
+                    type="text"
+                    id="expenseName"
+                    placeholder="e.g. Food"
+                    required
+                >
+
+                <label for="expenseAmount">
+                    Amount
+                </label>
+
+                <input
+                    type="number"
+                    id="expenseAmount"
+                    placeholder="e.g. 25"
+                    min="0"
+                    step="0.01"
+                    required
+                >
+
+                <button type="submit">
+                    Add Expense
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Expense List -->
+        <section class="card expense-card">
+
+            <h2>Expense Records</h2>
+
+            <div id="expenseList">
+
+                <p class="empty-message">
+                    No expenses added yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Instructions -->
+        <section class="card">
+
             <h2>How SpendWise Works</h2>
 
             <ul>
-                <li>Enter your monthly budget.</li>
-                <li>Enter your total expenses.</li>
-                <li>SpendWise calculates your remaining balance.</li>
-                <li>Results are displayed in the browser console.</li>
+                <li>Set your monthly budget.</li>
+                <li>Add your expenses.</li>
+                <li>SpendWise stores expenses in an array.</li>
+                <li>JavaScript loops through the expenses.</li>
+                <li>The dashboard updates automatically.</li>
+                <li>SpendWise gives feedback based on your balance.</li>
             </ul>
+
         </section>
 
     </main>
 
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 SpendWise Budget Tracker</p>
+
+        <p>
+            &copy; 2026 SpendWise Budget Tracker
+        </p>
+
     </footer>
 
-        <script src="script.js"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>
-```
