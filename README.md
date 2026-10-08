@@ -1,142 +1,206 @@
 ````markdown
 # SpendWise Budget Tracker
 
-## Week 4 Assignment — CSS Grid & Flexbox
+## Project Description
 
-SpendWise is a modern Personal Budget & Expense Tracker dashboard.
+SpendWise is a personal budget and expense tracking application.
 
-This project continues the Budget Tracker developed during Weeks 1, 2, and 3.
+The project helps users enter their monthly budget and total expenses and then calculates the amount of money remaining.
 
-Week 4 focuses on rebuilding the visual layout using modern CSS Grid and Flexbox techniques.
+This project is being developed progressively using HTML, CSS, and JavaScript.
 
 ## Files
 
-### index.html
+The project contains the following files:
 
-The HTML file contains the structure of the SpendWise dashboard.
+- `index.html` - Provides the structure of the SpendWise application.
+- `style.css` - Provides the visual styling and dashboard layout.
+- `script.js` - Adds JavaScript functionality, user input, calculations, and functions.
+- `README.md` - Explains the project and the JavaScript concepts used.
 
-It includes:
+## JavaScript Concepts Implemented
 
-- Sidebar navigation
-- Dashboard header
-- User profile area
-- Financial summary cards
-- Six expense category cards
-- Recent transactions
-- Footer
+The JavaScript foundation of SpendWise demonstrates:
 
-### style.css
+- Variables
+- Constants
+- Strings
+- Numbers
+- User input
+- Number conversion
+- Functions
+- Function parameters
+- Return values
+- Conditional statements
+- Calculations
+- Console output
+- DOM manipulation
+- Event listeners
 
-The CSS file controls the complete visual layout and responsive design.
+## Variables
 
-It includes:
+Variables are used to store important budgeting information.
 
-- CSS Grid
-- Flexbox
-- CSS custom properties
-- Responsive media queries
-- Card micro-interactions
-- Hover effects
-- Keyboard focus effects
-- Dark theme support
-- Google Fonts
-- Responsive dashboard layout
+For example:
 
-## Dashboard Layout
-
-The dashboard contains:
-
-1. Sidebar Navigation
-2. Dashboard Header
-3. Financial Summary
-4. Food Card
-5. Transport Card
-6. Rent Card
-7. Entertainment Card
-8. Savings Card
-9. Utilities Card
-10. Recent Transactions
-
-## CSS Grid
-
-CSS Grid is used for the main dashboard layout.
-
-The desktop layout uses two columns:
-
-- Sidebar
-- Main content
-
-CSS Grid is also used to arrange the six category cards into a three-column layout.
-
-On smaller screens, the dashboard changes to a single-column layout.
-
-## Flexbox
-
-Flexbox is used for:
-
-- Sidebar navigation
-- Logo area
-- Dashboard header
-- Profile section
-- Category card content
-- Transaction rows
-- Buttons and other interface elements
-
-## CSS Custom Properties
-
-The application uses CSS variables defined in `:root`.
-
-Examples include:
-
-- `--brand-color`
-- `--accent-color`
-- `--surface-color`
-- `--background-color`
-- `--primary-text`
-- `--secondary-text`
-
-These variables create a consistent theme throughout the application.
-
-## Responsive Design
-
-A media query is used below 768px.
-
-The desktop two-column dashboard changes into a single-column layout on smaller screens.
-
-The category cards also change from three columns to one column.
-
-The layout was designed to work on desktop, tablet, and mobile screen sizes.
-
-## Card Micro-interactions
-
-The category cards include subtle hover and focus animations.
-
-When a user hovers over or focuses on a card:
-
-- The card moves slightly upward.
-- The shadow becomes stronger.
-
-The animation lasts 200ms and uses CSS `transform` and `box-shadow`.
-
-## Dark Theme
-
-The project includes a dark theme using:
-
-```css
-@media (prefers-color-scheme: dark)
+```javascript
+let budget = 0;
+let expenses = 0;
+let remainingBalance = 0;
 ````
 
-The dark theme overrides the CSS custom properties defined in `:root`.
+The `budget` variable stores the user's total budget.
 
-## Technologies Used
+The `expenses` variable stores the user's total expenses.
 
-* HTML5
-* CSS3
-* CSS Grid
-* Flexbox
-* CSS Custom Properties
-* Google Fonts
-* Responsive Web Design
+The `remainingBalance` variable stores the result of the budget calculation.
+
+A constant is also used to store the application name:
+
+```javascript
+const appName = "SpendWise";
+```
+
+## User Input
+
+SpendWise collects information from the user using JavaScript's `prompt()` function.
+
+For example:
+
+```javascript
+let budgetInput = prompt(
+    "Enter your total monthly budget:"
+);
+```
+
+The user's input is initially returned as text.
+
+The `Number()` function converts the input into a number so that calculations can be performed.
+
+```javascript
+budget = Number(budgetInput);
+```
+
+The same process is used to collect the user's expenses.
+
+## Budget Calculations
+
+SpendWise calculates the remaining balance by subtracting expenses from the budget.
+
+The calculation is placed inside a reusable function:
+
+```javascript
+function calculateRemainingBalance(
+    budgetAmount,
+    expenseAmount
+) {
+    return budgetAmount - expenseAmount;
+}
+```
+
+The function receives the budget and expenses as parameters and returns the remaining balance.
+
+## Functions
+
+Functions help organize the JavaScript code into reusable sections.
+
+SpendWise uses functions including:
+
+```javascript
+calculateRemainingBalance()
+```
+
+This function calculates the remaining budget.
+
+```javascript
+displayResults()
+```
+
+This function displays the calculated information in the browser console and on the webpage.
+
+```javascript
+startBudgetCalculator()
+```
+
+This function collects user input, validates the information, performs the calculation, and displays the results.
+
+Using functions makes the application easier to understand, maintain, and expand.
+
+## Console Output
+
+The application displays clearly labeled results in the browser console.
+
+Example:
+
+```text
+================================
+SpendWise Budget Report
+================================
+Total Budget: $1000.00
+Total Expenses: $650.00
+Remaining Balance: $350.00
+================================
+Status: You have money remaining.
+================================
+```
+
+## How to Run the Project
+
+1. Open the SpendWise folder in VS Code.
+2. Make sure all four files are present.
+3. Open `index.html` in a web browser.
+4. Open the browser Developer Tools.
+5. Select the Console tab.
+6. Click the **Start Budget Calculator** button.
+7. Enter your budget when prompted.
+8. Enter your expenses when prompted.
+9. Check the calculated results on the webpage and in the console.
+
+## Testing
+
+Example test:
+
+```text
+Budget: 1000
+Expenses: 650
+Remaining Balance: 350
+```
+
+Expected result:
+
+```text
+Total Budget: $1000.00
+Total Expenses: $650.00
+Remaining Balance: $350.00
+```
+
+Another test:
+
+```text
+Budget: 500
+Expenses: 500
+Remaining Balance: 0
+```
+
+Expected status:
+
+```text
+Your budget has been fully used.
+```
+
+If expenses are greater than the budget:
+
+```text
+Budget: 500
+Expenses: 650
+Remaining Balance: -150
+```
+
+Expected status:
+
+```text
+You have exceeded your budget.
+```
 
 ## Author
 
